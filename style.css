@@ -121,37 +121,7 @@ display: flex;
 }
 
 
-.enroll-tooltip {
-  display: none; /* Hide tooltip by default */
-  position: absolute;
-  background-color: #333;
-  color: white;
-  padding: 10px; /* Adjust padding for better spacing */
-  border-radius: 5px;
-    /* Position above the button */
-    background: transparent; color: #000;  background: gold;
-  left: 28%;
-  transform: translateX(-50%);
-  white-space: nowrap; /* Prevent text wrapping */
-  z-index: 1; /* Ensure it appears above other elements */
-  text-align: left; /* Align text to the left */
-}
-
-.enroll-tooltip ul {
-  list-style-type:square; /* Remove default list styles */
-  margin: 0;
-  padding: 0;
-}
-
-.enroll-tooltip li {
-  margin: 5px 0; /* Space between list items */
-  background: transparent;
-}
-
-.bn39:hover + .enroll-tooltip {
-  display: block; /* Show tooltip on hover */
-}
-
+ 
  
 .welcome-back{
 margin-top: 12vh;
@@ -325,14 +295,76 @@ margin-top: 12vh;
  }
 
 @media (max-width: 1000px) {
-.container{
-  flex-direction: column;
+
+
+  .customer{
+    margin-left: 0;
+    margin-right: 3000px;
+  }
+.logo{
+  margin-right: 20px;
 }
-   
+  .container{
+ flex-direction: column;
+}
+   .right-section{
+    display: block;
+   }
+.bn5{
+  margin-left: 1px;
+}
+
+
  }
  .custom-toast {
   border-radius: 102px; /* Customize the border radius */
   padding: 16px; /* Add padding for a better look */
   font-family: Arial, sans-serif; /* Optional: Change the font */
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+
+
+.customer {
+  position: relative; /* Make the container relative */
+ 
+}
+
+.enroll-tooltip {
+  display: none; /* Initially hidden */
+  position: absolute; /* Position it absolutely */
+  background-color: #3333336c; /* Dark background */
+  color: white; /* Text color */
+  padding: 10px; /* Padding */ display:grid;
+  border-radius: 8px; /* Rounded corners */ top: 30% ;
+  left: 69%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust centering */
+  opacity: 0; /* Start as invisible */
+  transition: opacity 0.3s ease; /* Smooth fade in */
+  z-index: 1000; /* Ensure it appears above other elements */
+  margin-top: 5px; /* Spacing above the tooltip */
+}
+
+.customer:hover .enroll-tooltip {
+  display: block;   display:grid;
+  opacity: 1;  
+}
+
+ 
+.enroll-tooltip ul {
+  list-style-type:circle;  
+  padding: 0;   cursor: pointer;
+  margin: 0; 
+ 
+}
+
+.enroll-tooltip li {
+  margin: 5px 0;  
+  padding: 5px 10px;  
+  background: rgba(0, 0, 0, 0.731);  
+  border-radius: 5px; 
+  transition: background 0.3s; 
+}
+
+.enroll-tooltip li:hover {
+  background: #555; 
 }
