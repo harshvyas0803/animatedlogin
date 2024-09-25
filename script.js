@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     
     const newImage = document.createElement('img');
-    newImage.src = "/right-content.png";  
+    newImage.src = "right-content.png";  
     newImage.classList.add('new-image');  
     newImage.style.display = "none"; // Hide it  
     newImage.style.position = "absolute"; // Ensure absolute positioning  
